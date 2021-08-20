@@ -58,7 +58,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: igd-ms-demo-app-1-backend-gcp.azuredemoms.com
+    - host: igd-ms-demo-app-1-backend.azuredemoms.com
       paths:
         - path: /
           pathType: ImplementationSpecific
