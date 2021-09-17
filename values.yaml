@@ -5,13 +5,20 @@
 replicaCount: 1
 
 image:
-  repository: acrigdmsdemo.azurecr.io/demoui
+  repository: acrigdmsdemo.azurecr.io/backendservice
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
 
 env:
-  MYSQL_URL: "http://igd-ms-demo-app-1-backend.azuredemoms.com"
+  DEVELOPMENT_MYSQL_DB_HOST: "igd-ms-demo-mysql.mysql.database.azure.com"
+  DEVELOPMENT_MYSQL_DB_NAME: "igdmsdemodb"
+  DEVELOPMENT_MYSQL_DB_USER: "igdmsdemouser@igd-ms-demo-mysql"
+  DEVELOPMENT_MYSQL_DB_PASS: "Wipro@123"
+  MYSQL_DB_HOST: "igd-ms-demo-mysql.mysql.database.azure.com"
+  MYSQL_DB_NAME: "igdmsdemodb"
+  MYSQL_DB_USER: "igdmsdemouser@igd-ms-demo-mysql"
+  MYSQL_DB_PASS: "Wipro@123"
 
 imagePullSecrets: []
 nameOverride: ""
